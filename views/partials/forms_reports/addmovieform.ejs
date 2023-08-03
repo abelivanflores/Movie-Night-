@@ -1,0 +1,58 @@
+
+<h1 style = 'text-align: center;'>Select the friends who you want to add a movie list to!</h1>
+<h6 style = 'text-align: center;'>*dropdown only shows those with no movie lists*</h6>
+
+<form action = '/addmovies' method = 'POST' name = 'addmovieform' id = 'addmovieform' style="text-align: center;">
+
+    <select name = "friendid" id = "friendid" class = 'dropdown'>
+        
+        <option default selected disabled>Select the applicable friend</option>
+        <%console.log(addmoviessearch)%>
+        <% for(x in addmoviessearch){%>
+            
+            <%console.log(addmoviessearch)%>
+            <option value = "<%=addmoviessearch[x].id%>"> <%= addmoviessearch[x].fname + ' ' + addmoviessearch[x].lname %> </option>
+        <% }%>
+        
+    </select>
+    <br>
+    <br>
+    <label for ="movie1">movie1</label>
+    <input type='text' id = 'movie1' name = 'movie1'>
+    <br><br>
+    <label for ="movie2">movie2</label>
+    <input type='text' id = 'movie2' name = 'movie2'>
+    <br><br>
+    <label for ="movie3">movie3</label>
+    <input type='text' id = 'movie3' name = 'movie3'>
+    <br><br>
+    <label for ="movie4">movie4</label>
+    <input type='text' id = 'movie4' name = 'movie4'>
+    <br><br>
+    <label for ="movie5">movie5</label>
+    <input type='text' id = 'movie5' name = 'movie5'>
+    <br><br>
+    <label for ="movie6">movie6</label>
+    <input type='text' id = 'movie6' name = 'movie6'>
+    <br><br>
+    <label for ="movie7">movie7</label>
+    <input type='text' id = 'movie7' name = 'movie7'>
+    <br><br>
+    <label for ="movie8">movie8</label>
+    <input type='text' id = 'movie8' name = 'movie8'>
+    <br><br>
+    <label for ="movie9">movie9</label>
+    <input type='text' id = 'movie9' name = 'movie9'>
+    <br><br>
+    <label for ="movie10">movie10</label>
+    <input type='text' id = 'movie10' name = 'movie10'>
+    <br><br>
+
+    
+
+
+
+    <input type='submit' id = 'submit' value = 'Submit '>
+    
+
+</form>

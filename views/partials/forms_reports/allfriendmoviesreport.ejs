@@ -1,0 +1,64 @@
+<div id = 'navbarwidth' style = 'width:15%;float: left;'>
+
+</div>
+<div id = tablediv style = 'width:85%;float: right;'>
+
+ <!-- Here is my table that will include the user's results -->
+ <table class = 'table' id = 'maintable' name = 'main' style="margin-top: 2%;text-align: center;">
+    <!-- Here is the table header -->
+    <thead>
+        <tr>
+        <th scope="col" >Row #</th>
+        <th scope="col" >Movielist ID</th>
+        <th scope="col"  >Friend ID</th>
+        <th scope="col"  >Movie1</th>
+        <th scope="col"  >Movie2</th>
+        <th scope="col"  >Movie3</th>
+        <th scope="col"  >Movie4</th>
+        <th scope="col"  >Movie5</th>
+        <th scope="col"  >Movie6</th>
+        <th scope="col"  >Movie7</th>
+        <th scope="col"  >Movie8</th>
+        <th scope="col"  >Movie9</th>
+        <th scope="col"  >Movie10</th>
+        </tr>
+    </thead>
+    <tbody>
+
+
+
+
+
+
+        <!-- Here is my embedded javascript for repeating the table line items based on the result. I use key to track the iterations, then I use the retrieve the table data by using the iteration as an index. 
+        When numbering the rows, I used x and made it so x = key + 1 because normally the index starts at 0.  -->
+        
+        
+        <% var x=0   %>
+        <% for (key in friendmovielist){ %>
+            <% var x = Number(key) + 1   %>
+            <%//console.log(x)%>
+            <tr>
+            <th scope = 'row'><%=x %></th>
+            <td>    <%=friendmovielist[key].id %>    </td>
+            <td>    <%= friendmovielist[key].friendid %>    </td>
+            <td>    <%= friendmovielist[key].movie1 %>    </td>
+            <td>    <%= friendmovielist[key].movie2 %>    </td>
+            <td>    <%= friendmovielist[key].movie3 %>    </td>
+            <td>    <%= friendmovielist[key].movie4 %>    </td>
+            <td>    <%= friendmovielist[key].movie5 %>    </td>
+            <td>    <%= friendmovielist[key].movie6 %>    </td>
+            <td>    <%= friendmovielist[key].movie7 %>    </td>
+            <td>    <%= friendmovielist[key].movie8 %>    </td>
+            <td>    <%= friendmovielist[key].movie9 %>    </td>
+            <td>    <%= friendmovielist[key].movie10 %>    </td>
+            </tr>
+        <%}%>
+     
+
+
+
+    </tbody>
+      
+</table>
+</div>

@@ -1,0 +1,53 @@
+ 
+ <div class="sidenav">
+  <a href="/">Index</a>
+  <button class="dropdown-btn">Friends
+   
+    <i class="fa fa-caret-down">▼</i>
+  </button>
+  <div class="dropdown-container">
+    <a href="/addfriend"> Add Friend</a>
+    <a href="/updatefriend">Update friend</a>
+    <a href="/removefriend">Remove friend</a>
+  </div>
+
+  <button class="dropdown-btn">Movies
+    <i class="fa fa-caret-down">▼</i>
+  </button>
+  <div class="dropdown-container">
+    <a href="/addmovies">Add Movies </a>
+    <a href="/updatefriendmovies">Update a Friend's Movies</a>
+    <a href="/removefriendmovies">Remove a Friend's Movie List</a>
+  </div>
+  <button class="dropdown-btn">Reports
+    <i class="fa fa-caret-down">▼</i>
+  </button>
+  <div class="dropdown-container">
+    <a href="/allfriends">All Friends Report</a>
+    <a href="/allfriendmovies">All Movielist Report</a>
+  </div>
+  
+
+  <a href="/decision">Decision Maker</a>
+
+</div> 
+<script>
+  /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+  var dropdown = document.getElementsByClassName("dropdown-btn");
+  var i;
+  
+  for (i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+    dropdownContent.style.display = "none";
+    } else {
+    dropdownContent.style.display = "block";
+    }
+    });
+  }
+
+  
+</script>
+  

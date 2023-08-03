@@ -1,0 +1,74 @@
+
+
+
+<form action = '/updatefriend' method = 'POST' name = 'selectform' id = 'selectform' style="text-align: center;" >
+
+    <select name = "friendselect" id = "friendselect" class = 'dropdown' onchange ="this.form.submit()" style = 'width: 25%;'>
+        
+        <option default selected disabled>Select the applicable friend</option>
+        
+        
+        
+        
+
+        <% for(x in friendslist){%>
+            <option value = "<%=friendslist[x].id%>"> <%= friendslist[x].fname + ' ' + friendslist[x].lname %> </option>
+        <% }%>
+
+
+
+    </select>
+    </form>
+    <br><br>
+
+    </h1>
+    <br><br>
+
+    
+    
+
+    
+
+    <form action = '/updatefriend' method = 'POST' name = 'updatenameform' id = 'updatenameform' style="text-align: center;" >
+        <h1 style="text-align: center;">
+            <% if(fname =='' || fname == undefined ||lname=='' || lname== undefined ){ %>
+             <%}else{%>
+                Update name for  "<%=fname + ' ' + lname%>"
+            <%}%>
+        <h1></h1>
+        <div>
+            <div class="left" style = "width: 40%;float: left;text-align: right;">
+                <label for ="addfriendfname">First Name: </label><br><br>
+                <label for ="addfriendlname">Last Name:   </label><br>
+            </div>
+            <div class="right"style = "width: 60%;float: right;text-align: left;">
+                <input type='text' id = 'updatefriendfname' name = 'updatefriendfname' style = "width: 33.33333%;" value = '<%=fname%>'><br><br>
+                <input type='text' id = 'updatefriendlname' name = 'updatefriendlname' style = "width: 33.33333%;" value = '<%=lname%>'><br><br>
+            </div>
+        </div>
+        <br><br><br><br><br><br><br>
+        <input type='submit' id = 'submit' value = 'Submit ' style = 'align-self: center;'>
+    </form>
+    
+    <%     %>
+    
+    
+
+    
+
+
+
+
+
+
+
+    
+
+    
+    
+
+    
+
+
+
+    

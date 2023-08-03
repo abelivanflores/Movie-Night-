@@ -1,0 +1,40 @@
+
+<div id = 'navbarwidth' style = 'width:15%;float: left;'>
+
+</div>
+<div id = 'decisionform' style = 'width:85%;float: right;'>
+    <h1 style = 'text-align: center;'>Select the friends who are going to participate in movienight!</h1>
+    <h6 style = 'text-align: center;'>*checklist only shows those with movie lists*</h6>
+
+
+<div id = 'decisionwindowleft' style = 'width:40%;float: left;'>
+
+</div>
+
+<div id = 'decisionwindowright' style = 'width:60%;float: right;'>
+    <form action = '/decision' method = 'POST' name = 'listform1' id = 'listform1' style="text-align: left;" >    
+        <ul>
+            
+        
+        <% for (x in inmovielist){     %>
+            
+            <li>
+                <input type="checkbox" id="<%=Number(inmovielist[x].friendid)%>" name="selected" value = '<%=Number(inmovielist[x].friendid)%>'>
+                <%//console.log((inmovielist[x].fname))%>
+                <label for="<%=(inmovielist[x].friendid)%>"> <%=(inmovielist[x].fname) + ' ' + (inmovielist[x].lname)%>  </label><br>
+            </li>
+        <%}%>
+        </ul> 
+    
+        
+    <input name = 'submit' id = 'submit' type="submit" value="Submit" style = 'margin-left: 5%;'> <br>
+    </form>
+</div>
+
+
+<div id = 'decisionwindowbottom' style = 'width:100%;float: left;'>
+
+</div>
+
+
+</div>

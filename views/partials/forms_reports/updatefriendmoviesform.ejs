@@ -1,0 +1,102 @@
+<form action = '/updatefriendmovies' method = 'POST' name = 'selectform' id = 'selectform' style="text-align: center;" >
+
+    <select name = "friendselect" id = "friendselect" class = 'dropdown' onchange ="this.form.submit()" style = 'width: 25%;'>
+        
+        <option default selected disabled>Select the applicable friend</option>
+        
+        
+        
+        
+
+        <% for(x in friendslist){%>
+            <option value = "<%=friendslist[x].id%>"> <%= friendslist[x].fname + ' ' + friendslist[x].lname %> </option>
+        <% }%>
+
+
+
+    </select>
+    </form>
+    
+    <%     %>
+    
+    
+    
+
+    <form action = '/updatefriendmovies' method = 'POST' name = 'updatemoviesform' id = 'mainform' style="text-align: center;">
+
+        
+
+        <% //console.log(friendvalues) %>
+
+        <% //var justmovies = friendvalues %>
+        <%//console.log(justmovies) %>
+        <% //console.log(justmovies)%>
+        
+
+
+
+        <%//console.log(justmovies) %>
+
+        <h1 style="text-align: center;">
+            <% if(fname =='' || fname == undefined ||lname=='' || lname== undefined ){ %>
+             <%}else{%>
+                Movies for  <%=fname + ' ' + lname%> 
+            <%}%>
+        
+        
+        </h1>
+
+        
+        <% for(x in friendvalues){%>
+            <% if(x == 'friendid' || x == 'id'){%>
+                <% continue %>
+            <% }else{%>
+                <% var movie = eval('friendvalues.' + x )%>
+                <% //console.log(movie) %>
+                
+                <br>
+                <label for =" <%= x %>"><%= x %>:  </label>
+                <input type='text' id = '<%= x %>' name = '<%= x %>' value = " <%= movie %>" style = 'width: 25%;'>
+                <br>
+                
+            <% }%>
+
+
+
+                
+            
+        <%}%>
+
+
+                
+        <% if(fname =='' || fname == undefined ||lname=='' || lname== undefined ){ %>
+            <%}else{%>
+               <input name = 'submit' id = 'submit' type="submit" value="Submit" style = 'margin-top: 2%;'> 
+           <%}%>
+        <%//justmovies = [] %>
+        <%friendvalues = []%>
+        <%//fname = []%>
+        <%//lname = []%>
+        
+        
+
+
+    </form>
+    
+
+
+
+
+
+
+
+    
+
+    
+    
+
+    
+
+
+
+    

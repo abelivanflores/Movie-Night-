@@ -1,0 +1,12 @@
+<form action = '/removefriend' method = 'DELETE' name = 'removefriend' id = 'removefriend' style="text-align: center;">
+
+    <select name = "friendselect" id = "friendselect" class = 'dropdown'>
+        
+        <option default selected disabled>Select the applicable friend</option>
+        <% for(x in friendslist){%>
+            <option value = "<%=friendslist[x].id%>"> <%= friendslist[x].fname + ' ' + friendslist[x].lname %> </option>
+        <% }%>
+    </select>
+    <input name = 'submit' id = 'submit' type="submit" value="Submit" style = 'margin-top: 2%;'> 
+
+</form>

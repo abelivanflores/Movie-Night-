@@ -1,0 +1,45 @@
+<div id = 'navbarwidth' style = 'width:15%;float: left;'>
+
+</div>
+<div id = 'tablediv' style = 'width:85%;float: right;'>
+ <!-- Here is my table that will include the user's results -->
+ <table class = 'table' id = 'maintable' name = 'main' style="margin-top: 2%;text-align: center;margin-left: auto; margin-right: auto;">
+    <!-- Here is the table header -->
+    <thead>
+        <tr>
+        <th scope="col" >Row #</th>
+        <th scope="col" >Friend ID</th>
+        <th scope="col"  >First Name</th>
+        <th scope="col"  >Last Name</th>
+        </tr>
+    </thead>
+    <tbody>
+
+
+
+
+
+
+        <!-- Here is my embedded javascript for repeating the table line items based on the result. I use key to track the iterations, then I use the retrieve the table data by using the iteration as an index. 
+        When numbering the rows, I used x and made it so x = key + 1 because normally the index starts at 0.  -->
+        
+        
+        <% var x=0   %>
+        <% for (key in friendslist){ %>
+            <% var x = Number(key) + 1   %>
+            <%//console.log(x)%>
+            <tr>
+            <th scope = 'row'><%=x %></th>
+            <td>    <%= friendslist[key].id %>    </td>
+            <td>    <%= friendslist[key].fname %>    </td>
+            <td>    <%= friendslist[key].lname %>    </td>
+            </tr>
+        <%}%>
+     
+
+
+
+    </tbody>
+      
+</table>
+</div>
